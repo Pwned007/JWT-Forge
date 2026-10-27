@@ -1,0 +1,16 @@
+__pycache__/
+*.pyc
+.venv/
+venv/
+*.egg-info/
+.pytest_cache/
+*.log
+
+# scan output — never commit a real target's findings
+*.json
+report.html
+*_poc.py
+recovered.pem
+pub.pem
+attacker_key.pem
+attacker_priv.pem

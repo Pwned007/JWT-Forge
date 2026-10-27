@@ -1,0 +1,7 @@
+cryptography>=42
+requests>=2.31
+click>=8.1
+rich>=13.7
+
+# Optional — makes recover-pubkey dramatically faster for 2048-bit RSA keys
+# gmpy2>=2.1

@@ -1,0 +1,32 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "jwtforge"
+version = "0.1.0"
+description = "A world-class JWT web-auth testing tool for authorized penetration testing."
+readme = "README.md"
+requires-python = ">=3.11"
+license = { text = "MIT" }
+authors = [{ name = "Cytomate" }]
+keywords = ["jwt", "security", "pentest", "auth", "jwks"]
+dependencies = [
+    "cryptography>=42.0",
+    "requests>=2.31",
+    "click>=8.1",
+    "rich>=13.7",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8.0", "pytest-cov>=4.1", "flask>=3.0"]
+
+[project.scripts]
+jwtforge = "jwtforge.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["jwtforge*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"
